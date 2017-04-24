@@ -1,0 +1,22 @@
+{
+    "name": "milantex/mysql-tso",
+    "description": "Creates a PHP object which describes the MySQL table structure for a specified table in the database.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Milan Tair",
+            "email": "milan.tair@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Milantex\\TSO\\": "src/"
+        }
+    },
+    "require": {
+        "php" : ">=7.0.0",
+        "milantex/daw": "*"
+    }
+}
