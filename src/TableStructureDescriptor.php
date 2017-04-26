@@ -38,6 +38,15 @@
         }
 
         /**
+         * Returns True if the table exists or False otherwise.
+         * @param string $name
+         * @return bool
+         */
+        public function tableExists(string $name) : bool {
+            return key_exists($name, $this->tables);
+        }
+
+        /**
          * Returns the TableStructure object for the specified table.
          * @param string $name
          * @return \Milantex\TSO\TableStructure|NULL

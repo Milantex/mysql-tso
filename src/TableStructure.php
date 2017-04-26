@@ -45,6 +45,15 @@
         }
 
         /**
+         * Returns True if the field exists or False otherwise.
+         * @param string $name
+         * @return bool
+         */
+        public function fieldExists(string $name) : bool {
+            return key_exists($name, $this->fields);
+        }
+
+        /**
          * Returns the field structure object for the specified field
          * @param string $name
          * @return \Milantex\TSO\FieldStructure
