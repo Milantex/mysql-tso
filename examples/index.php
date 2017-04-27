@@ -9,10 +9,14 @@
     $tso = new TableStructureDescriptor($daw);
     $tso->analyse();
 
-    $pageTable = $tso->getTableStructure('page');
-    if ($pageTable) {
-        $titleField = $pageTable->getFieldStructure('title');
-        if ($titleField) {
-            echo 'Can page.title be null? ' . ($titleField->isNullable()?'Yes':'No');
+    if ($tso->tableExists('page') &&
+        $tso->getTableStructure('page')->fieldExists('title')) {
+        echo 'Can page.title be null? ';
+        if ($tso->getTableStructure('page')
+                ->getFieldStructure('title')
+                ->isNullable()) {
+            echo 'Yes';
+        } else {
+            echo 'No';
         }
     }
