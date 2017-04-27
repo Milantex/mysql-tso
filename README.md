@@ -39,27 +39,25 @@ Make sure to run the composer command to install dependencies:
 ## Using the library in your project
 
 ```php
-<?php
-    require_once 'vendor/autoload.php';
+    require_once '../vendor/autoload.php';
 
     use Milantex\DAW\DataBase;
     use Milantex\TSO\TableStructureDescriptor;
 
-    # Enter database parameters
-    $daw = new DataBase('localhost', 'demo', 'root', '');
+    $daw = new DataBase('localhost', 'demo7', 'root', '');
 
-    # Instantiate a table structure descriptor object
     $tso = new TableStructureDescriptor($daw);
-		
-    # Start the database analysis
     $tso->analyse();
 
-    $pageTable = $tso->getTableStructure('page');
-    if ($pageTable) {
-        $titleField = $pageTable->getFieldStructure('title');
-        if ($titleField) {
-            echo 'Can page.title be null? ' .
-                 ($titleField->isNullable()?'Yes':'No');
+    if ($tso->tableExists('page') &&
+        $tso->getTableStructure('page')->fieldExists('title')) {
+        echo 'Can page.title be null? ';
+        if ($tso->getTableStructure('page')
+                ->getFieldStructure('title')
+                ->isNullable()) {
+            echo 'Yes';
+        } else {
+            echo 'No';
         }
     }
 ```
