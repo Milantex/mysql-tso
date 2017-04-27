@@ -44,9 +44,13 @@ Make sure to run the composer command to install dependencies:
     use Milantex\DAW\DataBase;
     use Milantex\TSO\TableStructureDescriptor;
 
-    $daw = new DataBase('localhost', 'demo7', 'root', '');
+    # Enter database parameters
+    $daw = new DataBase('localhost', 'demo', 'root', '');
 
+    # Instantiate a table structure descriptor object
     $tso = new TableStructureDescriptor($daw);
+
+    # Start the database analysis
     $tso->analyse();
 
     if ($tso->tableExists('page') &&
