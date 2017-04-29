@@ -1,3 +1,11 @@
+[![Build Status](https://travis-ci.org/Milantex/mysql-tso.svg?branch=master)](https://travis-ci.org/Milantex/mysql-tso)
+[![codecov](https://codecov.io/gh/Milantex/mysql-tso/branch/master/graph/badge.svg)](https://codecov.io/gh/Milantex/mysql-tso)
+[![Code Climate](https://codeclimate.com/github/Milantex/mysql-tso/badges/gpa.svg)](https://codeclimate.com/github/Milantex/mysql-tso)
+[![Latest Stable Version](https://poser.pugx.org/milantex/mysql-tso/v/stable)](https://packagist.org/packages/milantex/mysql-tso)
+[![Total Downloads](https://poser.pugx.org/milantex/mysql-tso/downloads)](https://packagist.org/packages/milantex/mysql-tso)
+[![License](https://poser.pugx.org/milantex/mysql-tso/license)](https://packagist.org/packages/milantex/mysql-tso)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/f76e17d9-8cfa-4fd5-ab00-5ea53cd4faf5/mini.png)](https://insight.sensiolabs.com/projects/f76e17d9-8cfa-4fd5-ab00-5ea53cd4faf5)
+
 # What is MySQL-TSO?
 This package provides a mechanism that analyzes the structure of tables in a MySQL/MariaDB database. It might be better to see an example of how to use it instead of reading a lengthy description.
 
