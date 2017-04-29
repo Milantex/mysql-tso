@@ -9,4 +9,15 @@
             <directory suffix='.php'>./tests</directory>
         </testsuite>
     </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+            <file>src/FieldStructure.php</file>
+            <file>src/TableStructure.php</file>
+            <file>src/TableStructureDescriptor.php</file>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-clover" target="clover.xml" />
+    </logging>
 </phpunit>
