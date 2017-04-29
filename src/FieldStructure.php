@@ -251,7 +251,7 @@
          * @param \stdClass $fieldData
          */
         private function doType(\stdClass &$fieldData) {
-            if (preg_match('/unsigned/', $fieldData->Extra)) {
+            if (preg_match('/unsigned/', $fieldData->Type)) {
                 $this->isUnsigned = TRUE;
             }
 
@@ -268,10 +268,10 @@
          * @param \stdClass $fieldData
          */
         private function doKeysAndIndices(\stdClass &$fieldData) {
+            $this->isNullable = FALSE;
+
             if ($fieldData->Null == 'YES') {
                 $this->isNullable = TRUE;
-            } else {
-                $this->isNullable = FALSE;
             }
 
             if ($fieldData->Key == 'PRI') {
