@@ -67,7 +67,7 @@
          * @param DataBase $daw
          * @param string $tableName
          */
-        function __construct(DataBase &$daw, string $tableName) {
+        public function __construct(DataBase &$daw, string $tableName) {
             $this->daw = $daw;
             $this->tableName = preg_replace('/[^A-z0-9_]/', '', $tableName);
 

@@ -234,7 +234,7 @@
          * information properties.
          * @param \stdClass $fieldData
          */
-        function __construct(\stdClass &$fieldData) {
+        public function __construct(\stdClass &$fieldData) {
             $this->name = $fieldData->Field;
             $this->collation = $fieldData->Collation;
             $this->comment = $fieldData->Comment;

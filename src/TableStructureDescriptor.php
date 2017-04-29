@@ -61,14 +61,14 @@
          * database which the TSO should preform analysis of.
          * @param DataBase $daw
          */
-        function __construct(DataBase &$daw) {
+        public function __construct(DataBase &$daw) {
             $this->daw = $daw;
         }
 
         /**
          * Performs database table structure analysis
          */
-        function analyse() {
+        public function analyse() {
             $tables = $this->daw->selectMany('SHOW tables;');
             foreach ($tables as $table) {
                 $tableName = array_values((array) $table)[0];
